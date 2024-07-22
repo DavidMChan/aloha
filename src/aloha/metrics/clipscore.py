@@ -172,8 +172,8 @@ def _cm_kys(
         raise ImportError("CLIPScoreMetrics requires the `clip` package to be installed.")
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    clip_type = "RN50x64"
-    # clip_type = "ViT-B/32"
+    # clip_type = "RN50x64"
+    clip_type = "ViT-B/32"
     model, transform = clip.load(clip_type, device=device, jit=False)
     model.eval()
 
@@ -210,9 +210,9 @@ def _cm_kys(
 class CLIPScoreMetrics(Metric):
     def __init__(self) -> None:
         if clip is None:
-            raise ImportError("CLIPScoreMetrics requires the `clip` package to be installed.")
+            raise ImportError("CLIPScoreMetrics requires the `openai-clip` package to be installed.")
 
-    def __call__(
+    def evaluate_dataset(
         self,
         samples: List[Sample],
         candidate_key: str,

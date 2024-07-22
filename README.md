@@ -72,7 +72,7 @@ print(matches)
 #  'unparsed_target_objects': '- cat\n- table'}
 ```
 
-To compute it for a full dataset of samples, you can use the `evaluate_dataset` script. First, prepare your dataset in
+To compute it for a full dataset of samples, you can use the `evaluate-dataset` script. First, prepare your dataset in
 a JSON file with the following format:
 
 ```json
@@ -89,13 +89,13 @@ a JSON file with the following format:
 Then, run the following command:
 
 ```bash
-aloha evaluate_dataset -m aloha path/to/dataset.json
+aloha evaluate-dataset -m aloha path/to/dataset.json
 ```
 
 The above command has many options to customize the evaluation. You can see them by running:
 
 ```bash
-aloha evaluate_dataset --help
+aloha evaluate-dataset --help
 ```
 
 ## Citation
